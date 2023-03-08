@@ -1,0 +1,328 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family:'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 68%;
+    
+}
+
+
+.background-image {
+    background-image: url("https://c1.wallpaperflare.com/preview/330/375/636/class-diary-exam-homework.jpg");
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+
+  .blur-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px); /* Fallback blur effect */
+    filter: blur(10px); /* Fallback for browsers that don't support backdrop-filter */
+    z-index: -1;
+  }
+
+  .header{
+    position: fixed;
+    width: 100%;
+    padding: 0 2.5rem;
+    height: 5rem;
+    background-color:rgba(0, 0, 0, 0.331);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0.4rem 1.5rem 0 rgb(237, 53, 7);
+    border-color: rgb(220, 227, 119);
+    z-index: 999;
+}
+
+.header .logo{
+    height: 4rem;
+    width: 20%;
+    color: wheat;
+    margin-left: 0.01vw;
+    border-radius: 1.2rem;
+    
+}
+
+
+
+.Navbar{
+    background-color: rgba(56, 56, 243, 0.1);
+    padding: 1.5rem;
+    border-radius: 1.8rem;
+    box-shadow: 0 0.4rem 1.5rem 0 rgb(246, 236, 48);;
+}
+
+.Navbar-list{
+    display: flex;
+    gap: 4rem;
+    list-style: none;
+}
+
+.Navbar-link:link,.Navbar-link:visited{
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out 0.1s;
+}
+
+.Navbar-link:hover, .Navbar-link:active{
+    /*background-image: linear-gradient(to right, #e1c553, #99f572, #93f3f4, #73da91);*/
+    box-shadow: 0 0.4rem 1.5rem 0 rgb(250, 251, 220);
+    border-color: rgb(119, 124, 227);
+    padding: 0.2rem 1.5rem;
+    border-radius: 1.3rem;
+    
+    text-shadow: 0.5rem;
+    font-size: 1.4rem;
+    font-weight: 800;
+    
+}
+
+
+/************************Underline Animation*****************************/
+
+.Navbar-link {
+    position: relative;
+}
+
+.Navbar-link::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: white;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.2s ease-in-out 0.1s;
+}
+
+.Navbar-link:hover::before, .Navbar-link:focus::before {
+    visibility: visible;
+    transform: scaleX(-1);
+    
+
+}
+
+/**************************Underline animation***************************/
+
+
+.mobile-navbar-btn{
+    cursor: pointer;
+    display: none;
+    z-index: 999;
+    
+}
+
+.mobile-navbar-icon{
+    color: aliceblue;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.mobile-navbar-icon[name = 'close-outline']{
+    display: none;
+}
+
+/**************************Simple Carousel***************************/
+.slideshow-container {
+    max-width: 100rem;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Make the images invisible by default */
+  .Containers {
+    display: none;
+    
+  }
+  .Containers img{
+    overflow-y: auto;
+    height: calc(100vh - 7.5rem);
+    margin-top: 8rem;
+    z-index: 200;
+    border-radius: 1.3rem;
+    box-shadow: 0 0.4rem 1.5rem 0 rgb(54, 232, 191);
+    border-color: rgb(119, 124, 227);
+  }
+  
+  /* forward & Back buttons */
+  .Back, .forward {
+    cursor: pointer;
+    position: absolute;
+    top: 48%;
+    width: auto;
+    margin-top: -2.3rem;
+    padding: 1.7rem;
+    color: grey;
+    font-weight: bold;
+    font-size: 1.9rem;
+    transition: 0.4s ease;
+    border-radius: 0 1.9rem 1.9rem 0;
+    user-select: none;
+    background-color: rgba(0,0,0,0.5);
+    box-shadow: 0 0.4rem 1.5rem 0 rgb(232, 226, 54);
+    border-color: rgb(24, 25, 42);
+  }
+  
+  /* Place the "forward button" to the right */
+  .forward {
+    right: 0;
+    border-radius: 1.9rem 0 0 1.9rem;
+  }
+  
+  /*when the user hovers,add a black background with some little opacity */
+  .Back:hover, .forward:hover {
+    background-color: rgba(0,0,0,0.9);
+  }
+  
+  /* Caption Info */
+ 
+.Info {
+    color: #e3e3e3;
+    font-size: 2.6rem;
+    padding: 1rem 1.4rem;
+    position: absolute;
+    letter-spacing: 1.5vw;
+
+    justify-self: center;
+    bottom: 1rem;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.493);
+    border-radius: 0.9rem;
+    box-shadow: 0 0.4rem 1.5rem 0 rgb(33, 22, 199);
+    border-color: rgba(225, 227, 119, 0.786);
+    width: 80vw;
+  }
+  
+  /* Worknumbering (1/3 etc) */
+  .MessageInfo {
+    color: #f2f2f3;
+    font-size: 1.4rem;
+    padding: 1rem 1.4rem;
+    margin-top: 5rem;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The circles or bullets and indicators */
+  .dots {
+    cursor: pointer;
+    height: 1.6rem;
+    width: 1.6rem;
+    margin: 0 0.3rem;
+    background-color: rgba(44, 95, 95, 0.764);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.5s ease;
+    box-shadow: 0 0.4rem 1.5rem 0 rgb(251, 220, 247);
+    border-color: rgb(119, 223, 227);
+  }
+  
+  .enable, .dots:hover {
+    background-color: #141407;
+  }
+  
+  /* Faint animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.4s;
+    animation-name: fade;
+    animation-duration: 1.4s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .5}
+    to {opacity: 2}
+  }
+  
+  @keyframes fade {
+    from {opacity: .5}
+    to {opacity: 2}
+  }
+
+/**************************Simple Carousel***************************/
+@media (max-width: 58em) {
+
+ 
+
+    .header{
+        position: fixed;
+        z-index: 999;
+
+    }
+
+    .Navbar{
+        /*display: none;*/
+        width: 100%;
+        height: 95vh;
+        background-color: rgba(72, 14, 122, 0.607);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 999;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transform: translateY(-100%);
+        transition: all 0.8s linear;
+
+        
+    }
+
+    .Navbar-list{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mobile-navbar-btn{
+        display: block;
+    }
+
+    .header .logo{
+      font-size: 1.3rem;
+        width: 20%;
+        margin-left: 0.01vw;
+    }
+
+    .active .Navbar{
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    .active .mobile-navbar-btn .mobile-navbar-icon[name="close-outline"] {
+        display: block;
+      }
+    
+    .active .mobile-navbar-btn .mobile-navbar-icon[name="menu-outline"] {
+        display: none;
+      }
+  
+}
+@media only screen and (orientation: portrait) and (max-width: 768px) {
+  .Containers img {
+    height: 40vh;
+  }
+}

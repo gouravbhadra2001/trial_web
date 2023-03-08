@@ -1,0 +1,160 @@
+@font-face {
+  font-family: myFirstFont;
+  src: url("chopin-script/ChopinScript.ttf");
+}
+
+
+.About-Us {
+    display: flex;
+    align-items: center;
+    height: 350vh;
+    width: 100%;
+    background-color: rgba(125, 21, 177, 0.27);
+    margin-top: 30rem;
+  }
+  
+.About-Us .brief{
+  
+  padding: 3rem;
+  margin: 2rem;
+  background-color: rgba(0, 139, 139, 0.406);
+  border-radius: 4rem;
+  
+}
+.About-Us .about .brief p, h1{
+  vertical-align: top;
+  text-align: justify;
+  color: aliceblue;
+  font-size: 1.8rem;
+}
+
+h1{
+  text-align: right;
+  font-family:  myFirstFont;
+  font-size: 5rem;
+}
+
+.About-Us .about .founder{
+  height: 70vh;
+  
+  padding: 3rem;
+  margin: 2rem;
+  background-color: rgba(55, 126, 19, 0.505);
+  border-radius: 4rem;
+}
+.About-Us .about .founder .founder_title {
+  text-align: left;
+  font-family: myFirstFont;
+  font-size: 5rem;
+}
+
+.About-Us .about .founder .about-founder {
+  display: flex;
+  flex-direction: row;
+}
+
+.About-Us .about .founder .about-founder .picture {
+  width: 50rem;
+  height: 20vh;
+  margin-right: 4vw;
+  background-color: rgba(0, 0, 0, 0.498);
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+.About-Us .about .founder .about-founder .founder-desc p{
+  vertical-align: top;
+  text-align: justify;
+  color: aliceblue;
+  font-size: 1.8rem;
+}
+
+
+
+@media (max-width: 58rem)  {
+  .About-Us{
+    width: 100vw;
+  }
+
+  .About-Us .about .brief p, h1{
+    width: 80vw;
+    vertical-align: top;
+    text-align: justify;
+    color: aliceblue;
+    font-size: 1.4rem;
+  }
+  
+ h1{
+    text-align: right;
+    font-family:  myFirstFont;
+    font-size: 3rem;
+  }
+  
+  
+  .About-Us .about .founder{
+    width: 90vw;
+    height: 140vh;
+    padding: 3rem;
+    margin: 2rem;
+    background-color: rgba(55, 126, 19, 0.505);
+    border-radius: 4rem;
+  }
+
+  .About-Us .about .founder .about-founder {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  .About-Us .about .founder .about-founder .picture{
+    margin-left: 4vw;
+    margin-right: 4vw;
+    border-radius: 5rem;
+    height: 70vh;
+    margin-bottom: 5vh;
+    width: 40vw;
+
+  }
+
+  @media (max-width: 50rem) {
+    .About-Us .about .founder .about-founder .picture{
+      
+      width: 50vw;
+  
+    }
+  }
+
+  @media (max-width: 40rem) {
+    .About-Us .about .founder .about-founder .picture{
+      
+      width: 60vw;
+  
+    }
+  }
+
+  @media (max-width: 30rem) {
+    .About-Us .about .founder .about-founder .picture{
+      
+      width: 70vw;
+  
+    }
+  }
+  
+  .About-Us .about .founder .about-founder .founder-desc p{
+    width: 80vw;
+    vertical-align: top;
+    text-align: justify;
+    color: aliceblue;
+    font-size: 1.4rem;
+  }
+
+
+  @font-face {
+    font-family: myFirstFont;
+    src: url("chopin-script/ChopinScript.ttf");
+  }
+  
+}
